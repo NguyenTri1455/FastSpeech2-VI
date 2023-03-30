@@ -12,6 +12,8 @@ def main(config):
         aishell3.prepare_align(config)
     if "LibriTTS" in config["dataset"]:
         libritts.prepare_align(config)
+    if "VI" in config["dataset"]:
+        vi.prepare_align(config)
 
 
 if __name__ == "__main__":
