@@ -28,7 +28,7 @@ def prepare_align(config):
                 wav, _ = librosa.load(wav_path, sampling_rate)
                 wav = wav / max(abs(wav)) * max_wav_value
                 wavfile.write(
-                    os.path.join(out_dir, speaker, "{}.wav".format(base_name)),
+                    os.path.join(out_dir, speaker, base_name),
                     sampling_rate,
                     wav.astype(np.int16),
                 )
